@@ -1,0 +1,36 @@
+﻿<h1>Members</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <form name="ctrl.searchForm" class="form-inline">
+            <div class="form-group">
+                <label>Search</label>
+                <input type="text" class="form-control" ng-model="ctrl.searchText" ng-model-options="{debounce:200}" ng-change="ctrl.searchMembers()" />
+            </div>
+            <a ng-href="#/member" class="btn btn-success"><i class="fa fa-user"></i>&nbsp; Add User</a>
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-striped table-hover" ng-if="ctrl.members.length">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="member in ctrl.members" ng-click="ctrl.navigateToMemberDetail(member)">
+                    <td>{{::member.firstName}}</td>
+                    <td>{{::member.lastName}}</td>
+                    <td>{{::member.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination total-items="ctrl.totalMembers" ng-model="ctrl.currentPage" ng-change="ctrl.searchMembers()"></pagination>
+        <div class="alert alert-info" ng-if="ctrl.members.length < 1">
+            <p>There are currently no members in the system. Why not <a href="#/member">add a new one.</a></p>
+        </div>
+    </div>
+</div>

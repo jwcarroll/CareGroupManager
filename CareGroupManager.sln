@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CareGroupManager", "CareGroupManager\CareGroupManager.csproj", "{A15E5972-185B-4143-AFCB-60F99CF85731}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{DA290522-E388-4A54-A43B-E08E9DD82D25}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{4DCA1C46-2D74-40D5-9227-AA999C66F734}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\CareGroupManager-WAWS-dev.json = PublishScripts\Configurations\CareGroupManager-WAWS-dev.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{214A5FBF-6533-4330-8B59-C12E2E75646D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A15E5972-185B-4143-AFCB-60F99CF85731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15E5972-185B-4143-AFCB-60F99CF85731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15E5972-185B-4143-AFCB-60F99CF85731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15E5972-185B-4143-AFCB-60F99CF85731}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DCA1C46-2D74-40D5-9227-AA999C66F734} = {DA290522-E388-4A54-A43B-E08E9DD82D25}
+	EndGlobalSection
+EndGlobal

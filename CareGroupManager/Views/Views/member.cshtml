@@ -1,0 +1,111 @@
+﻿<div class="row">
+    <div class="col-sm-12">
+        <h1>New Member</h1>
+    </div>
+    <div class="col-sm-12">
+        <form name="ctrl.form" novalidate model-state="ctrl.modelState" model-state-prefix="member">
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input name="firstName" ng-model="ctrl.member.firstName" class="form-control" type="text" required />
+                <div ng-messages="ctrl.form.firstName.$error">
+                    <span ng-message="required" class="help-block text-danger">First Name is required</span>
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="firstName"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input name="lastName" ng-model="ctrl.member.lastName" class="form-control" type="text" required />
+                <div ng-messages="ctrl.form.lastName.$error">
+                    <span ng-message="required" class="help-block text-danger">Last Name is required</span>
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="lastName"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input name="email" ng-model="ctrl.member.email" class="form-control" type="text" required />
+                <div ng-messages="ctrl.form.email.$error">
+                    <span ng-message="required" class="help-block text-danger">Email is required</span>
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="email"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Home Phone</label>
+                <input name="homePhone" ng-model="ctrl.member.homePhone" class="form-control" type="tel" />
+                <div ng-messages="ctrl.form.homePhone.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="homePhone"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Work Phone</label>
+                <input name="workPhone" ng-model="ctrl.member.workPhone" class="form-control" type="tel" />
+                <div ng-messages="ctrl.form.workPhone.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="workPhone"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Cell Phone</label>
+                <input name="cellPhone" ng-model="ctrl.member.cellPhone" class="form-control" type="tel" />
+                <div ng-messages="ctrl.form.cellPhone.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="cellPhone"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Address</label>
+                <input name="address" ng-model="ctrl.member.address" class="form-control" type="text" />
+                <div ng-messages="ctrl.form.address.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="address"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">City</label>
+                <input name="city" ng-model="ctrl.member.city" class="form-control" type="text" />
+                <div ng-messages="ctrl.form.city.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="city"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">State</label>
+                <input name="state" ng-model="ctrl.member.state" class="form-control" type="text" />
+                <div ng-messages="ctrl.form.state.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="state"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Zip</label>
+                <input name="zip" ng-model="ctrl.member.zip" class="form-control" type="text" />
+                <div ng-messages="ctrl.form.zip.$error">
+                    <span ng-message="modelState" class="help-block text-danger">
+                        <model-state-error-message name="zip"></model-state-error-message>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Care Group</label>
+                <select class="form-control" ng-model="ctrl.member.careGroupId" ng-options="group.careGroupId as group.name for group in ctrl.careGroups">
+                    <option value="">-- select a care group --</option>
+                </select>
+            </div>
+            <button type="submit" ng-disabled="ctrl.form.$pristine" ng-click="ctrl.save()" class="btn btn-primary">Save</button>
+            <button type="button" ng-disabled="ctrl.form.$pristine" ng-click="ctrl.cancelChanges()" class="btn btn-link">Cancel changes</button>
+            <button type="button" ng-if="ctrl.member.memberId" ng-click="ctrl.deleteMember()" class="btn btn-danger pull-right">Delete</button>
+        </form>
+    </div>
+</div>

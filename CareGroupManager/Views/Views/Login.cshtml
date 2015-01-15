@@ -1,0 +1,10 @@
+﻿<form class="form-signin" role="form">
+    <h2 class="form-signin-heading">Please sign in</h2>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" id="inputEmail" class="form-control" placeholder="Username" ng-model="ctrl.username" required="" autofocus="">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="ctrl.password" required="">
+    <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="ctrl.login()" ng-disabled="ctrl.isLoggingIn">
+        Sign in <i class="fa fa-cog fa-spin" ng-if="ctrl.isLoggingIn"></i>
+    </button>
+</form>

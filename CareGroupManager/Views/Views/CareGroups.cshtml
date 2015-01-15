@@ -1,0 +1,41 @@
+﻿<h1>Care Groups</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <form class="form-inline">
+            <div class="form-group">
+                <select class="form-control" ng-model="ctrl.currentCareGroup" ng-options="group.name for group in ctrl.careGroups" ng-change="ctrl.loadCareGroupMembers()">
+                    <option value="">-- Select A Care Group --</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="button" ng-click="ctrl.createNewGroup()">Create New Group</button>
+        </form>
+    </div>
+</div>
+<div class="row" ng-if="ctrl.currentCareGroup">
+    <div class="col-sm-12">
+        <h2>{{ctrl.currentCareGroup.name}} <small>members</small></h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table table-striped table-hover" ng-if="ctrl.careGroupMembers.length">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="member in ctrl.careGroupMembers" ng-click="ctrl.navigateToMemberDetail(member)">
+                    <td>{{::member.firstName}}</td>
+                    <td>{{::member.lastName}}</td>
+                    <td>{{::member.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="alert alert-info" ng-if="ctrl.careGroupMembers.length < 1">
+            <p>Care group has no members</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" ng-click="modal.dismiss()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title">{{modal.title}}</h4>
+</div>
+<div class="modal-body">
+    <div class="form-group">
+        <label>{{modal.promptLabel}}</label>
+        <input type="text" class="form-control" ng-model="modal.value" />
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" ng-click="modal.dismiss()">{{modal.dismissButtonText}}</button>
+    <button type="button" class="btn btn-danger" ng-click="modal.close()">{{modal.closeButtonText}}</button>
+</div>

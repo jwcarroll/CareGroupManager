@@ -1,0 +1,34 @@
+{
+  "name": "CareGroupManager",
+  "version": "0.0.1",
+  "authors": [
+    "Josh Carroll <jwarren.carroll@gmail.com>"
+  ],
+  "description": "Contact Manager for Church Care Groups",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "CareGroupManager/Scripts/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-animate": "~1.3.4",
+    "angular-route": "~1.3.4",
+    "angular": "~1.3.4",
+    "bootstrap": "~3.3.1",
+    "modernizr": "~2.8.3",
+    "respond": "~1.4.2",
+    "ui-bootstrap": "~0.12.0",
+    "angular-bootstrap": "~0.12.0"
+  },
+  "resolutions": {
+    "angular": "~1.3.4"
+  }
+}
